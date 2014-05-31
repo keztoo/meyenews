@@ -1,0 +1,49 @@
+    <!-- this is the html/css for the article widget summary -->
+<li>
+  <img id="summary_article_image_@MACRO_DOM_NAME" width=100px height=100px src="images/logo_slashdot.png" onclick="nextArticle('@MACRO_DOM_NAME');">
+  <p>
+    <strong>
+      <a href="#openArticle_@MACRO_DOM_NAME"><span id="@MACRO_DOM_NAME_summary_article_title">Article Title</span></a>
+    </strong>
+    <span id="@MACRO_DOM_NAME_summary_article_content" ondblclick="getDataSourcesFromServer('@MACRO_DOM_NAME');">
+
+ This video was taken recently in Damascus. It shows quite clearly that government forces are indeed shelling civilian areas, regardless of what the official reports state.
+    </span>
+  </p>
+</li>
+
+    <!-- this is the modal dialog box html for the article detail -->
+    <div id="openArticle_@MACRO_DOM_NAME" class="activeDialog">
+      <div>
+        <a id='article_modal_anchor' href='#close' title='Close' class='close'>X</a>
+        <h2 id='@MACRO_DOM_NAME_detail_article_title'>Article Title</h2>
+        <p>
+          <span id="@MACRO_DOM_NAME_detail_article_content">
+          Content goes here
+          </span>
+        </p>
+        <br/><br/>
+        <a id="@MACRO_DOM_NAME_source_link" href="#" target="_blank">Full Story</a><br/>
+        <br/><br/>
+        VOTE UP/DOWN GOES HERE! (once you vote it shows you current counts)<br/><br/>
+        Originally Published By Goes Here!<br/><br/>
+        Show current tags and categories here!<br/><br/>
+        Add Tag:<input type=text> 
+        Categorize Article (not sure where these come from yet): 
+        <select>
+          <option>Add New</option>
+          <option>Left Leaning</option>
+          <option>Conservative</option>
+          <option>Etc</option>
+        </select>
+        <br/><br/>
+        Add Comment:
+        <textarea rows=5 cols=50></textarea> 
+        <br/><br/>
+        User Comments  (+- show/hide)
+        <br/>
+        <div style="height:300px; width:400px; border:1px solid black;">
+        </div>
+      </div>
+    </div> <!-- end open a modal diaglog box (its filled in by in it code) -->
+

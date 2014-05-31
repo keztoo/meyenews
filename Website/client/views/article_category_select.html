@@ -1,0 +1,10 @@
+              <td align=right style="padding-top: 1px;padding-bottom: 1px;">
+                <a href="#" style="background-color:transparent;" onclick="return(showFilterModal('@MACRO_CATEGORY_NAME'));">@MACRO_CATEGORY_NAME:</a>
+              </td>
+              <td style="padding-top: 1px;padding-bottom: 1px;">
+                <select id="select_@MACRO_CATEGORY_NAME" onchange="handleChangedOption('@MACRO_CATEGORY_NAME', this.value, this);" style="padding:1px; spacing:1px; margins:1px;">
+                  <option value='0'> &nbsp; </option>
+@MACRO_CATEGORY_DATA_SOURCES
+                </select>
+              </td>
+

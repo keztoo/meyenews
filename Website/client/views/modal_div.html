@@ -1,0 +1,89 @@
+    <div id="openModal" class="modalDialog">
+      <div>
+        <a id='modal_anchor' href='#close' title='Close' class='close'>X</a>
+        <h2>
+          Select Data Source - <span id='current_category' style='font-size:18px;'></span>
+        </h2>
+
+        <!-- this is the table that holds the categories and options -->
+        <!-- it is populated at run time when the user clicks change data source -->
+        <div id="data_source_table">
+        </div>
+
+        <!-- table for create new data source -->
+        <table width=90% align=center style="border:none; padding-top: 1px;padding-bottom: 1px;">
+
+          <tr style="padding-top: 1px;padding-bottom: 1px;">
+            <td colspan=2 style="padding-top: 1px;padding-bottom: 1px;"><b>Create New Data Source</b></td>
+          </tr>
+
+          <tr style="padding-top: 1px;padding-bottom: 1px;">
+            <td align=right style="padding-top: 1px;padding-bottom: 1px;">Name:</td>
+            <td style="padding-top: 1px;padding-bottom: 1px;"><input id='create_new_name' type=text></td>
+          </tr>
+
+          <tr style="padding-top: 1px;padding-bottom: 1px;">
+            <td align=right style="padding-top: 1px;padding-bottom: 1px;">Type:</td>
+            <td style="padding-top: 1px;padding-bottom: 1px;">
+              <select id=create_new_type>
+                <option>RSS</option>
+                <option>Twitter</option>
+                <option>Facebook</option>
+                <option>Atom</option>
+                <option>Custom</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr style="padding-top: 1px;padding-bottom: 1px;">
+            <td align=right style="padding-top: 1px;padding-bottom: 1px;">URL:</td>
+            <td style="padding-top: 1px;padding-bottom: 1px;"><input id='create_new_url' type=text></td>
+          </tr>
+
+          <tr style="padding-top: 1px;padding-bottom: 1px;">
+            <td align=right style="padding-top: 1px;padding-bottom: 1px;">Category:</td>
+            <td style="padding-top: 1px;padding-bottom: 1px;">
+              <select id=create_new_category>
+<!-- BUG TODO this needs to be filled in by the cron that creates the index page -->
+                <option value='1'>Contributors</option>
+                <option value='2'>Newspapers</option>
+                <option value='3'>Websites</option>
+                <option value='4'>Government</option>
+                <option value='5'>Lifestyle</option>
+                <option value='6'>Sports</option>
+                <option value='7'>Politics</option>
+                <option value='8'>Religion</option>
+                <option value='9'>Entertainment</option>
+                <option value='10'>Education</option>
+                <option value='11'>Environment</option>
+                <option value='12'>Technology</option>
+                <option value='13'>Shopping</option>
+                <option value='14'>Fashion</option>
+                <option value='15'>Other</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr style="padding-top: 1px;padding-bottom: 1px;">
+            <td align=right style="padding-top: 1px;padding-bottom: 1px;">Author:</td>
+            <td style="padding-top: 1px;padding-bottom: 1px;"><input id='create_new_author' type=text></td>
+          </tr>
+
+          <tr style="padding-top: 1px;padding-bottom: 1px;">
+            <td align=right style="padding-top: 1px;padding-bottom: 1px;">Image:</td>
+            <td align=left style="padding-top: 1px;padding-bottom: 1px;"><input id="create_new_image" type=file></td>
+          </tr>
+
+          <tr style="padding-top: 1px;padding-bottom: 1px;">
+            <td style="padding-top: 1px;padding-bottom: 1px;">
+              <a href='#' onclick='return(modalCancelPressed());' style="background-color:transparent;"><button>Cancel</button></a>
+            </td>
+            <td align=right style="padding-top: 1px;padding-bottom: 1px;">
+              <a href='#' onclick='return(createNewDataSource());' style="background-color:transparent;"><button>Accept</button></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+
