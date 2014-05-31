@@ -7,6 +7,6 @@ def logMsg(msg):
 
 
 def getMyCfg(cfgOption):
-  cfgBundle = {'db_name':'ken_meyenews', 'db_user':'ken', 'db_pw':'P1ucKWzZ'}
+  cfgBundle = {'db_name':'ken_meyenews', 'db_user':'ken', 'db_pw':'######'}
   return cfgBundle[cfgOption]
 
