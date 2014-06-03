@@ -77,8 +77,8 @@ function RssFeedArticle(ordinal, domName, feedUrl, feedCategory, feedImage, html
 
     RssFeedArticle.prototype.updateFeedUI = function(feedIndex)
     {
-      MAX_SNIPPET_SIZE = 70;
-      var thisContent = this.thefeeds[feedIndex].content;
+      MAX_SNIPPET_SIZE = 120;
+      var thisContent = this.thefeeds[feedIndex].content + ' ... ';
       if (thisContent.length > MAX_SNIPPET_SIZE){
         thisContent = thisContent.substring(0,MAX_SNIPPET_SIZE);
       }
