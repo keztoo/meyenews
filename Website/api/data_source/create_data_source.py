@@ -111,7 +111,8 @@ def index(req):
     #logMsg(finalSql)
 
     # connect to database
-    db = MySQLdb.connect(host='localhost', db='meyenews', user='root', passwd='w00t')
+    db = MySQLdb.connect(host='localhost', db=getMyCfg('db_name'), user=getMyCfg('db_user'), passwd=getMyCfg('db_pw'))
+
     cursor = db.cursor()
     cursor.execute(finalSql)
     db.commit()

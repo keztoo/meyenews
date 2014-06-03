@@ -30,7 +30,7 @@ def index(req):
     # valid sid
     #userId = result[0]
     #returnString = 'UserID=' + str(userId)
-    filepath = "/home/ken/websites/meyenews/user_photos/"
+    filepath = "/home/ken/sites/meyenews/user_photos/"
 
     # A nested Field object holds the file
     fileitem = req.form['file']
@@ -44,7 +44,7 @@ def index(req):
 
     filename = fileitem.filename
     fname = "%s%s" % (filepath,filename)
-    logMsg('UploadFile: filename --->' + fname)
+    logMsg('\nUploadFile: filename --->' + fname)
 
     # save the image data to the filesystem
     open(fname, 'wb').write(file.file.read())
