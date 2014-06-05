@@ -17,7 +17,6 @@
       var file = files[0];
       var formData = new FormData();
       formData.append('file', file, file.name);
-//kajaxPostServer('api/data_source/save_datasource_file.py', formData, uploadImageCallBack);
       var xhr = new XMLHttpRequest();
       xhr.open('POST', 'api/data_source/save_datasource_file.py', true);
       xhr.onload = function () {
@@ -64,7 +63,6 @@
       thisArticle = globalArticles['article3_container'];
       feedImage = thisDataSource.feedImagePath + thisDataSource.feedImageName;
       thisArticle.changeDataSource(thisDataSource.feedUrl, feedImage);
-
     }
 
     function getUserPreferences(isInit)
@@ -76,7 +74,6 @@
       }else{
         kajaxPostServer('api/user/get_user_prefs.py', postStr, getPreferencesCallBack);
       }
-
     }
 
     function myCreateNewDataSourceCallBack(resp)
@@ -368,7 +365,6 @@
     {
       masterFileContents[fileUrl] = fileContents;
     }
-
 
     //
     // arrive here when all files have been loaded
