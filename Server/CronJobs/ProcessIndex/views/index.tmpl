@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<title>MEyeNews - User Generated, User Moderated News for the Masses</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="styles/layout.css" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="http://174.143.214.70/meyenews/images/favicon.ico"/>
+<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="scripts/jquery.timers.1.2.js"></script>
+<script type="text/javascript" src="scripts/jquery.galleryview.2.1.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.galleryview.setup.js"></script>
+<link rel="stylesheet" type="text/css" href="libraries/css/libmodal.css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("feeds", "1");</script>
+<script src="libraries/kajax.js"></script>
+<script src="libraries/libfetch.js"></script>
+<script src="libraries/libcookie.js"></script>
+<script src="client/RSSFeedArticle.js"></script>
+<script src="client/IndexApplication.js"></script>
+</head>
+<body id="top" onload="pageInit();">
+<div class="wrapper col0">
+  <div id="topline">
+    <p>Welcome: <span id="user_name">Guest</span> | <a id="loginout_anchor" href="#loginDiv" onclick='return(signInSignOutButtonPressed());'><span id='login_or_logout'>Sign-In</span></a></p>
+    <ul>
+      <li><a id="current_date" href="#">Friday, May 27th 2014 5:42PM</a> [0.1a]</li>
+      <li><a href="#"> &nbsp; &nbsp; </a></li>
+      <li><a href="#openAccount">Account</a></li>
+    </ul>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################### -->
+<div class="wrapper">
+  <div id="header">
+    <div class="fl_left">
+      <h1><a href="#"><img height=48px src="images/logo.png" style="padding-top:10px;"></a></h1>
+      <p>Real-Time, User Generated</p>
+    </div>
+    <div class="fl_right"><a href="#"><img src="images/demo/468x60.gif" alt="" /></a></div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ##################################################### -->
+<div class="wrapper col2">
+  <div id="topbar">
+    <div id="topnav">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">About</a>
+          <ul>
+            <li><a href="help.html">How to Use This Site</a></li>
+            <li><a href="#">What Is This Site</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Browser Plug-Ins</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Mobile</a>
+          <ul>
+            <li><a href="story.html">Set Location</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">Windows Mobile</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Post</a>
+          <ul>
+            <li><a href="#">Classified Ad</a></li>
+            <li><a href="#">Photo or Video</a></li>
+            <li><a href="#">Article</a></li>
+            <li><a href="#">Event</a></li>
+          </ul>
+        </li>
+        <li class="last"><a href="#">Community</a>
+          <ul>
+            <li><a href="#">Classifieds</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Top Stories</a></li>
+            <li><a href="#">Top Contributors</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="search">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="submit" name="go" id="go" value="Search" />
+        </fieldset>
+      </form>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ################################################### -->
+<div class="wrapper">
+  <div class="container">
+    <div class="content">
+      <div id="featured_slide">
+        <ul id="featurednews">
+
+@MACRO_CAROUSEL
+
+        </ul>
+      </div>
+    </div>
+    <div class="column">
+      <ul id="latestnews_div" class="latestnews">
+        <li id='article1_container'>
+        </li>
+
+        <li id='article2_container'>
+        </li>
+
+        <li id='article3_container'>
+        </li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ##################################################### -->
+<div class="wrapper">
+  <div id="adblock">
+    <div class="fl_left"><a href="#"><img src="images/demo/468x60.gif" alt="" /></a></div>
+    <div class="fl_right"><a href="#"><img src="images/demo/468x60.gif" alt="" /></a></div>
+    <br class="clear" />
+  </div>
+  <div id="hpage_cats">
+    <div class="fl_left">
+      <h2><a href="#">Environment &raquo;</a></h2>
+      <img src="images/demo/environment.jpg" alt="" />
+      <p><strong><a href="#">Wind Farms Take Hold in the US.</a></strong></p>
+      <p>In recent years, wind power has been one of the fastest-growing sources of energy around the world, popular for its potential to offer clean, abundant electricity.</p>
+    </div>
+    <div class="fl_right">
+      <h2><a href="#">Technology &raquo;</a></h2>
+      <img src="images/demo/technology.jpg" alt="" />
+      <p><strong><a href="#">BroadBand Usage Exceeds 50%.</a></strong></p>
+      <p>The share of persons employed with portable devices provided by the enterprise that allowed a mobile broadband Internet access almost doubled. In January 2012, 11% of persons employed were provided with portable devices that allow a mobile broadband Internet access is almost twice as many (6% in 2011).</p>
+    </div>
+    <br class="clear" />
+    <div class="fl_left">
+      <h2><a href="#">Sports &raquo;</a></h2>
+      <img src="images/demo/sports.jpg" alt="" />
+      <p><strong><a href="#">Expanded Wild Card Post Season Begins.</a></strong></p>
+      <p>Bad news for the four MLB wild-card teams: They have to play a single-elimination game Friday, amounting to an extra playoff round, which removes at least half of their chances of winning the World Series relative to the division winners that get to sit out this round.</p>
+    </div>
+    <div class="fl_right">
+      <h2><a href="#">Politics &raquo;</a></h2>
+      <img src="images/demo/politics.jpg" alt="" />
+      <p><strong><a href="#">Will Iran Become the Next Iraq.</a></strong></p>
+      <p>After simmering in low-intensity form for more than three decades, tensions between the Islamic Republic of Iran and the international community are reaching their boiling point. The regime's intransigence with respect to a number of hotly contested issues is setting the stage for a military conflagration between Iran and the West.</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ##################################################### -->
+<div class="wrapper">
+  <div class="container">
+    <div class="content">
+      <div id="hpage_latest">
+        <h2>What Our Readers Are Saying </h2>
+        <ul>
+          <li ondblclick="alert('Not User Configurable');"><img src="images/demo/woman1.jpg" alt="" />
+            <p>Afghanistan is now policing itself as the remaining American troops withdraw.</p>
+            <p>So now that Afghanis are in charge how has life changed for the average woman.</p>
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </li>
+          <li ondblclick="alert('Not User Configurable');"><img src="images/demo/business.jpg" alt="" />
+            <p>Retailers report sales are down. How will they fare once ObamaCare begins in 2013.</p>
+            <p>Americans will now be required to purchase health care; what about the average business.</p>
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </li>
+          <li class="last" ondblclick="alert('Not User Configurable');"><img src="images/demo/misc.jpg" alt="" />
+            <p>An apple a day keeps the doctor away has been considered sound advice for years.</p>
+            <p>However, recent reports indicate the level of pesticides used has radically increased recently.</p>
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </li>
+        </ul>
+        <br class="clear" />
+      </div>
+    </div>
+    <div class="column">
+      <div class="holder"><a href="#"><img src="images/demo/300x250.gif" alt="" /></a></div>
+      <div class="holder"><a href="#"><img src="images/demo/300x80.gif" alt="" /></a></div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ##################################################### -->
+<div class="wrapper">
+  <div id="footer">
+    <div class="footbox">
+      <h2>Latest Posts</h2>
+      <ul>
+        <li><a href="#">Latest Photos</a></li>
+        <li><a href="#">Latest Videos</a></li>
+        <li><a href="#">Latest Articles</a></li>
+        <li><a href="#">Latest Editorials</a></li>
+        <li><a href="#">Latest Reports</a></li>
+        <li class="last"><a href="#">See All ...</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Popular Posts</h2>
+      <ul>
+        <li><a href="#">Popular Photos</a></li>
+        <li><a href="#">Popular Videos</a></li>
+        <li><a href="#">Popular Articles</a></li>
+        <li><a href="#">Popular Editorials</a></li>
+        <li><a href="#">Popular Reports</a></li>
+        <li class="last"><a href="#">See All ...</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Local News</h2>
+      <ul>
+        <li><a href="#">General</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Government</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Society</a></li>
+        <li class="last"><a href="#">See All ...</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Global News</h2>
+      <ul>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Government</a></li>
+        <li><a href="#">Health</a></li>
+        <li class="last"><a href="#">See All ...</a></li>
+      </ul>
+    </div>
+    <div class="footbox last">
+      <h2>Who We Are</h2>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Mission Statement</a></li>
+        <li><a href="#">Advertise With Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li class="last"><a href="#">Our Partners</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ##################################################### -->
+<div class="wrapper">
+  <div id="socialise">
+    <ul>
+      <li><a href="#"><img src="images/facebook.gif" alt="" /><span>Facebook</span></a></li>
+      <li><a href="#"><img src="images/rss.gif" alt="" /><span>FeedBurner</span></a></li>
+      <li class="last"><a href="#"><img src="images/twitter.gif" alt="" /><span>Twitter</span></a></li>
+    </ul>
+    <div id="newsletter">
+      <h2>NewsLetter Sign Up !</h2>
+      <p>Please enter your Email and Name to join.</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Digital Newsletter</legend>
+          <div class="fl_left">
+            <input type="text" value="Enter name here&hellip;"  onfocus="this.value=(this.value=='Enter name here&hellip;')? '' : this.value ;" />
+            <input type="text" value="Enter email address&hellip;"  onfocus="this.value=(this.value=='Enter email address&hellip;')? '' : this.value ;" />
+          </div>
+          <div class="fl_right">
+            <input type="submit" name="newsletter_go" id="newsletter_go" value="&raquo;" />
+          </div>
+        </fieldset>
+      </form>
+      <p>To unsubsribe please <a href="#">click here &raquo;</a>.</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ##################################################### -->
+<div class="wrapper col8">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="#">MEyeNews Inc.</a></p>
+    <p class="fl_right">Website by <a href="#" title="Website Creators">Kenneth Clonedale Recreations</a></p>
+    <br class="clear" />
+  </div>
+</div>
+
+    <div id="loginDiv" class="modalDialog">
+    </div>
+
+    <!-- this is the modal dialog box html for set data source -->
+    <div id="modal_container">
+    </div> <!-- end modal container -->
+
+<!-- this is the account management modal -->
+<!-- TODO move out into separate file ! -->
+<div id="openAccount" class="modalDialog">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2><span id="account_mode">Create</span> Account</h2>
+    <table width=80% align=center>
+      <tr>
+        <td align=right>Email:</td>
+        <td>
+          <input type=text id=email>
+          Public:<input type=radio name=email_public value='yes'>
+          Private:<input type=radio name=email_public value='no'>
+        </td>
+      </tr>
+      <tr>
+        <td align=right>Password:</td>
+        <td><input type=password id=pw></td>
+      </tr>
+      <tr>
+        <td align=right>Confirm Password:</td>
+        <td><input type=password id=confirm_pw></td>
+      </tr>
+      <tr>
+        <td align=right>Display Name</td>
+        <td><input type=text id=display_name></td>
+      </tr>
+      <tr>
+        <td align=right>Location:</td>
+        <td>
+          <input type=text id=location>
+          Public:<input type=radio name=location_public value='yes'>
+          Private:<input type=radio name=location_public value='no'>
+        </td>
+      </tr>
+      <tr>
+        <td align=right>Tag Line</td>
+        <td>
+          <input type=text>
+          Public:<input type=radio name=tag_line_public value='yes'>
+          Private:<input type=radio name=tag_line_public value='no'>
+        </td>
+      </tr>
+      <tr>
+        <td align=right>
+          About the Author<br/>
+          Public:<input type=radio name=about_author_public value='yes'>
+          Private:<input type=radio name=about_author_public value='no'>
+        </td>
+        <td>
+          <textarea name="about_author" id="about_author" cols="30" rows="4">
+          </textarea>
+        </td>
+      </tr>
+      <tr>
+        <td align=right>
+          Image:<br/>
+          Public:<input type=radio name=image_public value='yes'>
+          Private:<input type=radio name=image_public value='no'>
+        </td>
+        <td>
+          <input type=file>
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2 align=right>
+          <a href="#" onclick="registerUser();">Accept</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+</body>
+</html>
