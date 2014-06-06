@@ -1,5 +1,8 @@
 
 Just run ProcessIndexCron.sh every 5 minutes from a CRON tab entry
 
+TODO:
+  create a common header and common footer and have the ProcessIndex.py script use them
+  
 
 
