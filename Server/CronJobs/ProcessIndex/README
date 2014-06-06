@@ -1,8 +1,5 @@
 
 Just run ProcessIndexCron.sh every 5 minutes from a CRON tab entry
 
-Note: if you have a problem it might be because the HeadlineGrabbers directory
-might not be on the python path. So from a CRON you may need a shell script
-which first sets the PYTHON_PATH environment variable to include this dirctory
 
 
