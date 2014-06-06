@@ -1,14 +1,22 @@
-import time
+import time, sys
 # script to create a new index page 
-# reads in views/index.tmpl and 
-# views/carousel_section.tmpl and
-# produces new_index.html
+#
+# python ProcessIndex.py index_page_template crousel_section_template output_file
+#
+# most probable invocation ...
+#
+#   python ProcessIndex.py /home/ken/code_line/meyenews/Server/CronJobs/ProcessIndex/views/index.tmpl /home/ken/code_line/meyenews/Server/CronJobs/ProcessIndex/views/carousel_section.tmpl /tmp/new_index.html
+#
 
-f = open('views/index.tmpl')
+indexTemplateFileName = sys.argv[1]
+carouselSectionTemplateFileName = sys.argv[2]
+outputFileName = sys.argv[3]
+
+f = open(indexTemplateFileName)
 page = f.read()
 f.close()
 
-f = open('views/carousel_section.tmpl')
+f = open(carouselSectionTemplateFileName)
 section = f.read()
 f.close()
 
@@ -48,7 +56,7 @@ for grabber in grabbers:
 
 page = page.replace("@MACRO_CAROUSEL", headlines)
 
-f = open('/tmp/new_index.html', 'w')
+f = open(outputFileName, 'w')
 f.write(page)
 f.close()
 
