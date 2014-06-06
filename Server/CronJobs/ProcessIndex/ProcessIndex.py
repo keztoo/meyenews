@@ -52,6 +52,7 @@ for grabber in grabbers:
       new_section = new_section.replace("@MACRO_IMAGE", gObj_headline['imageUrl'])
       new_section = new_section.replace("@MACRO_BYLINE", gObj_headline['articleByLine'])
       headlines = headlines + new_section
+      #print new_section
       exitFlag = 1
 
 page = page.replace("@MACRO_CAROUSEL", headlines)
