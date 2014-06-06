@@ -1,18 +1,8 @@
 
-ProcessIndex.py is meant to be run as a CRON. It will produce a new index.html page
-and place it in the /tmp directory. It technically creates the file 
-
-/tmp/new_index.html
-
-The assumption is another CRON will pick this file up and overwrite the 
-index.html page of the site periodically.
-
-You run ProcessIndex.py as follows ...
-
-python ProcessIndex.py
+Just run ProcessIndexCron.sh every 5 minutes from a CRON tab entry
 
 Note: if you have a problem it might be because the HeadlineGrabbers directory
-might not be on the python path. So from a CRON you may need a sheel script
+might not be on the python path. So from a CRON you may need a shell script
 which first sets the PYTHON_PATH environment variable to include this dirctory
 
 
