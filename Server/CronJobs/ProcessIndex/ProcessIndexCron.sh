@@ -1,7 +1,7 @@
 
 #PYTHONPATH="${PYTHONPATH}://home/ken/code_line/meyenews/Server/CronJobs/ProcessIndex/HeadlineGrabbers/:/path/to/another/cool/python/package/"
 
-PYTHONPATH="${PYTHONPATH}://home/ken/code_line/meyenews/Server/CronJobs/ProcessIndex/HeadlineGrabbers/
+set PYTHONPATH="${PYTHONPATH}://home/ken/code_line/meyenews/Server/CronJobs/ProcessIndex/HeadlineGrabbers/"
 
 export PYTHONPATH
 
