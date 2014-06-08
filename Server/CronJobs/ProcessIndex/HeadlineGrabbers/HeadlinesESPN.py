@@ -4,11 +4,11 @@ class HeadlinesESPN:
     pass
 
   def extractSection(self, page, startPosition, startToken, endToken):
-    startOffset = page.find(startToken)
+    startOffset = page.find(startToken, startPosition)
     if startOffset == -1:
-      return ""
+      return startOffset, ''
 
-    endOffset = page.find(endToken)
+    endOffset = page.find(endToken, startOffset)
     startOffset = startOffset + len(startToken)
     return startOffset, page[startOffset:endOffset]
 
@@ -22,9 +22,12 @@ class HeadlinesESPN:
     page = response.read()
 
     # get the article url
+
+    # for ESPN we take the second article, not the first
     startToken = '<guid isPermaLink="false">'
+    startPosition = page.find(startToken)
+    startPosition = startPosition + len(startToken)    
     endToken = '</guid>'
-    startPosition = 1
     startPosition, url = self.extractSection(page, startPosition, startToken, endToken)
 
     # now fetch the actual article

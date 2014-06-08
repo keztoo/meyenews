@@ -61,6 +61,6 @@ f = open(outputFileName, 'w')
 f.write(page)
 f.close()
 
-print "New Index Page Created: new_index.html"
+print "New Index Page Created:", outputFileName
 
 
