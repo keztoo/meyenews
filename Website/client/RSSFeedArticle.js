@@ -32,6 +32,7 @@ function RssFeedArticle(ordinal, domName, feedUrl, feedCategory, feedImage, html
     var closureSelf = this; // sneaky shit
 
     var feed = new google.feeds.Feed(feedUrl);
+    feed.setNumEntries(8);
     feed.load(function (result) {
       if (!result.error){
         closureSelf.thefeeds = result.feed.entries;
@@ -55,6 +56,7 @@ function RssFeedArticle(ordinal, domName, feedUrl, feedCategory, feedImage, html
       var closureSelf = this; // sneaky shit
   
       var feed = new google.feeds.Feed(feedUrl);
+      feed.setNumEntries(8);
       feed.load(function (result) {
         if (!result.error){
           closureSelf.thefeeds = result.feed.entries;
@@ -77,7 +79,7 @@ function RssFeedArticle(ordinal, domName, feedUrl, feedCategory, feedImage, html
 
     RssFeedArticle.prototype.updateFeedUI = function(feedIndex)
     {
-      MAX_SNIPPET_SIZE = 120;
+      MAX_SNIPPET_SIZE = 160;
       var thisContent = this.thefeeds[feedIndex].content + ' ... ';
       if (thisContent.length > MAX_SNIPPET_SIZE){
         thisContent = thisContent.substring(0,MAX_SNIPPET_SIZE);
